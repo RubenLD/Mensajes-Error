@@ -1,0 +1,19 @@
+.error .main-text {
+    font-size: 1.7rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: black;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.error .secondary-text {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: black;
+    text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}

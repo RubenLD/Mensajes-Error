@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<body>
+<nav th:fragment="menu" class="navbar navbar-expand-sm bg-light navbar-light ms-2 me-2">
+
+    <a class="navbar-brand" th:href="@{/}">
+      <img id="MDB-logo" src="/img/logo.png" alt="APP Logo" draggable="false" height="50"/>
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+              <a th:href="@{/}" class="nav-link mx-2"><i class="fas fa-heart pe-2"></i>Inicio</a>
+          </li>
+          <li class="nav-item">
+              <a th:href="@{/operacion}" class="nav-link mx-2"><i class="fas fa-heart pe-2"></i>División</a>
+          </li>
+          <li class="nav-item">
+              <a th:href="@{/comparacion}" class="nav-link mx-2"><i class="fas fa-heart pe-2"></i>Comparador</a>
+          </li>
+          <li class="nav-item">
+              <a th:href="@{/buscar}" class="nav-link mx-2"><i class="fas fa-heart pe-2"></i>Buscar archivo</a>
+          </li>
+        <li class="nav-item">
+          <a th:href="@{/crear}" class="nav-link mx-2"><i class="fas fa-heart pe-2"></i>Crear cliente</a>
+        </li>
+        <li class="nav-item ms-3">
+          <a type="button" class="btn btn-outline-secondary" th:href="@{/login}" sec:authorize="!isAuthenticated()">Iniciar sesión</a>
+        </li>
+      </ul>
+        <form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="post">
+            <button type="submit" class="btn btn-outline-secondary">Cerrar sesión</button>
+        </form> &nbsp; &nbsp;
+    </div>
+</nav>
+</body>
+</html>
